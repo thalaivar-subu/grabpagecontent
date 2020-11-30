@@ -1,0 +1,35 @@
+{
+  "name": "grabpagecontent",
+  "version": "1.0.0",
+  "description": "Grabs page and subpage content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "./node_modules/@babel/cli/bin/babel.js -d ./build ./app -s",
+    "build": "npm run clean && npm run build-server",
+    "start": "npm run build && node ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thalaivar-subu/grabpagecontent.git"
+  },
+  "author": "Subramanian.Ve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thalaivar-subu/grabpagecontent/issues"
+  },
+  "homepage": "https://github.com/thalaivar-subu/grabpagecontent#readme",
+  "dependencies": {
+    "@babel/cli": "7.12.8",
+    "@babel/core": "7.12.9",
+    "@babel/plugin-transform-runtime": "7.12.1",
+    "@babel/preset-env": "7.12.7",
+    "axios": "0.21.0",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-module-resolver": "4.0.0",
+    "cheerio": "1.0.0-rc.3",
+    "eslint": "7.14.0",
+    "prettier": "2.2.1"
+  }
+}
