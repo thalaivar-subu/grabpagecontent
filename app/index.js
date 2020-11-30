@@ -90,4 +90,4 @@ const init = async () => {
   }
 };
 
-init().then((x) => closeMongo());
+init().then(() => closeMongo());
