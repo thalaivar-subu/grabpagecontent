@@ -8,7 +8,10 @@
     "clean": "rm -rf build && mkdir build",
     "build-server": "./node_modules/@babel/cli/bin/babel.js -d ./build ./app -s",
     "build": "npm run clean && npm run build-server",
-    "start": "npm run build && node ./build/index.js"
+    "start": "npm run build && node ./build/index.js",
+    "lint": "npx eslint . --ext .js",
+    "lint-fix": "npx eslint . --ext .js --fix",
+    "prettify": "npx prettier . --ext.js --write"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
     "babel-plugin-module-resolver": "4.0.0",
     "cheerio": "1.0.0-rc.3",
     "eslint": "7.14.0",
+    "mongoose": "5.10.18",
     "prettier": "2.2.1"
   }
 }
